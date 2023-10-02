@@ -1,27 +1,27 @@
 package es.netmind.maquinacafe.modelos.tazacafe;
 
 public class TazaCafe {
-    private int id;
-    protected double volumen;
-    private String fabricante;
-    private boolean lista;
 
-    public TazaCafe(int id, double volumen, String fabricante, boolean lista) {
+    private int id;
+    private double volumen;
+    private String fabricante;
+    private boolean lista = false;
+
+    public TazaCafe(int id, double volumen, String fabricante) {
         this.id = id;
         this.volumen = volumen;
         this.fabricante = fabricante;
-        this.lista = lista;
     }
 
     public boolean prepararTaza() {
-        System.out.println("Preparando taza café-...");
+        System.out.println("Preparando taza...");
         return true;
     }
 
     public boolean servirTaza() {
-        System.out.println("Taza lista-...");
+        System.out.println("Taza lista...");
         this.lista = true;
-        return this.lista;
+        return true;
     }
 
     @Override
